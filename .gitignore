@@ -1,0 +1,116 @@
+# ==============================================================================
+# AurumMark - Root .gitignore (Client + Server Monorepo)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Dependencies
+# ------------------------------------------------------------------------------
+node_modules/
+*/node_modules/
+client/node_modules/
+server/node_modules/
+.pnp
+.pnp.js
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets (Keep .env.example tracked)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+client/.env
+server/.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!*.env.example
+!.env.example
+!client/.env.example
+!server/.env.example
+
+# ------------------------------------------------------------------------------
+# Build & Distribution Outputs
+# ------------------------------------------------------------------------------
+dist/
+dist-ssr/
+build/
+out/
+client/dist/
+server/dist/
+*.tsbuildinfo
+.next/
+
+# ------------------------------------------------------------------------------
+# Cache Directories (Vite, TypeScript, Linters)
+# ------------------------------------------------------------------------------
+.cache/
+.vite/
+.vite-temp/
+client/.vite/
+client/.vite-temp/
+.eslintcache
+.oxlintcache
+.stylelintcache
+
+# ------------------------------------------------------------------------------
+# Logs & Process Outputs
+# ------------------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# Media, User Uploads & Temporary Server Artifacts
+# ------------------------------------------------------------------------------
+uploads/
+server/uploads/*
+!server/uploads/.gitkeep
+temp/
+tmp/
+temp-exports/
+server/temp-exports/*
+!server/temp-exports/.gitkeep
+
+# ------------------------------------------------------------------------------
+# Test & Coverage Outputs
+# ------------------------------------------------------------------------------
+coverage/
+.nyc_output/
+*.lcov
+vitest.config.ts.timestamp*
+vite.config.ts.timestamp*
+
+# ------------------------------------------------------------------------------
+# Operating System & Filesystem Junk
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# ------------------------------------------------------------------------------
+# IDE & Code Editor Directories
+# ------------------------------------------------------------------------------
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# VS Code (ignore workspace state, keep recommended extensions)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
